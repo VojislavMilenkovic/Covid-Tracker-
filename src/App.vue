@@ -1,6 +1,8 @@
 <template>
-  <the-header></the-header>
-  <the-home></the-home>
+  <div class="app container text-center">
+    <the-header></the-header>
+    <the-home></the-home>
+  </div>
 </template>
 
 <script>
@@ -15,7 +17,11 @@ export default {
 };
 </script>
 
-<style>
-#app {
+<style scoped>
+.app {
+  height: 100vh;
+}
+.container {
+  max-width: 1040px;
 }
 </style>

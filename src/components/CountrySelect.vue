@@ -27,5 +27,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+select {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 5px 3px;
+  margin-bottom: 15px;
+}
+option {
+  font-size: 15px;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="data-title py-4">
     <h2>{{ text }}</h2>
     <div>
       {{ timestamp }}
@@ -19,5 +19,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.data-title {
+  font-size: 20px;
+}
 </style>

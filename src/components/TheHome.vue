@@ -2,15 +2,21 @@
   <main v-if="!loading">
     <data-title :text="title" :dataDate="dataDate"></data-title>
     <data-boxes :statistics="statistics"></data-boxes>
-    <country-select
-      :countries="countries"
-      @getCountry="getCountryData"
-    ></country-select>
-    <button v-if="statistics.Country" @click="showGlobalData">
-      Show Global data
-    </button>
+    <div class="d-md-flex justify-content-md-around align-items-center">
+      <country-select
+        :countries="countries"
+        @getCountry="getCountryData"
+      ></country-select>
+      <button
+        v-if="statistics.Country"
+        @click="showGlobalData"
+        class="btn btn-primary rounded-pill py-3 px-5"
+      >
+        Show Global data
+      </button>
+    </div>
   </main>
-  <main v-else>
+  <main v-else class="hourglass">
     <div>Fetching Data...</div>
     <img :src="loadingImg" alt="" />
   </main>
@@ -65,4 +71,7 @@ export default {
 </script>
 
 <style>
+.hourglass {
+  font-size: 40px;
+}
 </style>
